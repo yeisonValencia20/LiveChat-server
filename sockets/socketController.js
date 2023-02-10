@@ -4,9 +4,9 @@ const socketController = ( socket ) => {
 
     //socket.emit('connection', null);
 
-    socket.on('saludo', ( payload, callback ) => {
+    socket.on('message', ( payload, callback ) => {
         callback(payload)
-    })
+    });
 }
 
 
