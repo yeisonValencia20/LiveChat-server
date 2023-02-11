@@ -26,6 +26,8 @@ require('./database/config').dbConnection();
 
 // RUTAS
 app.use('/', require('./routes/home'));
+app.use('/users', require('./routes/users'));
+app.use('/users', require('./routes/auth'));
 
 server.listen( process.env.PORT, ( error ) => {
     if(error) throw new Error(error);
