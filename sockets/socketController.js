@@ -1,9 +1,8 @@
 
 const socketController = ( socket ) => {
-    console.log('Nuevo usuario conectado');
 
-    //socket.emit('connection', null);
-
+    const token = socket.handshake.headers['x-token'];
+    console.log(token)
     socket.on('message', ( payload, callback ) => {
         callback(payload)
     });
