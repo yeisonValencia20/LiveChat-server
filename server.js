@@ -19,7 +19,7 @@ app.use( cors() );
 app.use( express.json() );
 
 // SOCKET
-io.on('connection', ( socket ) => { socketController( socket ) });
+io.on('connection', ( socket ) => { socketController( socket, io ) });
 
 // Connect database
 require('./database/config').dbConnection();
